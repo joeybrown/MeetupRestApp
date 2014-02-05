@@ -2,10 +2,6 @@
 
 var rest = angular.module('rest', ['app', 'ngRoute', 'ngCookies', 'ngResource', 'ngAnimate']);
 
-rest.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
-
-    $routeProvider
-        .otherwise({redirectTo: '/'});
-
+rest.config(['$locationProvider', function ($locationProvider) {
     $locationProvider.html5Mode(true);
 }]);
