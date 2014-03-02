@@ -31,16 +31,7 @@
       <file leaf-file-name="AppCtrl.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/angular/rest/app/controllers/AppCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="137" selection-end="137" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="585">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lodash.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/util/lodash.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="677" selection-end="677" vertical-scroll-proportion="0.0" vertical-offset="101253" max-vertical-offset="101850">
+            <state line="3" column="0" selection-start="137" selection-end="137" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
               <folding />
             </state>
           </provider>
@@ -49,16 +40,43 @@
       <file leaf-file-name="app.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/angular/rest/app/templates/app.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="16" selection-start="697" selection-end="697" vertical-scroll-proportion="0.0" vertical-offset="267" max-vertical-offset="615">
+            <state line="30" column="16" selection-start="697" selection-end="697" vertical-scroll-proportion="-18.75" vertical-offset="0" max-vertical-offset="615">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GroupEvents.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/angular/rest/app/directives/GroupEvents.js">
+      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/App/api/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="20" selection-start="99" selection-end="99" vertical-scroll-proportion="0.1453958" vertical-offset="0" max-vertical-offset="619">
+            <state line="19" column="49" selection-start="680" selection-end="680" vertical-scroll-proportion="0.4503464" vertical-offset="90" max-vertical-offset="525">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/REST/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="255">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nav.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/REST/templates/nav.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="27" selection-start="733" selection-end="733" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="420">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/api/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="23" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
               <folding />
             </state>
           </provider>
@@ -74,12 +92,7 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/App/views.py" />
-        <option value="$PROJECT_DIR$/App/templatetags/login.py" />
-        <option value="$PROJECT_DIR$/static/angular/rest/app/services/GroupInfo.js" />
         <option value="$PROJECT_DIR$/static/angular/rest/app/App.js" />
-        <option value="$PROJECT_DIR$/App/api/urls.py" />
-        <option value="$PROJECT_DIR$/App/api/views.py" />
         <option value="$PROJECT_DIR$/static/angular/rest/app/services/GroupEvents.js" />
         <option value="$PROJECT_DIR$/static/angular/rest/app/directives/UpcomingEvents.js" />
         <option value="/DjangoTemplate Fragment (UpcomingEvents.js:133).html" />
@@ -90,13 +103,17 @@
         <option value="$PROJECT_DIR$/REST/templates/base.html" />
         <option value="$PROJECT_DIR$/static/angular/rest/app/controllers/AppCtrl.js" />
         <option value="/DjangoTemplate Fragment (GroupEvents.js:98).html" />
+        <option value="$PROJECT_DIR$/REST/views.py" />
+        <option value="$PROJECT_DIR$/REST/templates/nav.html" />
+        <option value="$PROJECT_DIR$/App/api/urls.py" />
+        <option value="$PROJECT_DIR$/App/api/utils.py" />
+        <option value="$PROJECT_DIR$/App/api/views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
     <option name="width" value="1440" />
-    <option name="height" value="780" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -190,6 +207,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="REST" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="REST" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="REST" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="REST" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -203,7 +252,7 @@
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Development/pycharmtutor" />
-    <property name="FullScreen" value="false" />
+    <property name="FullScreen" value="true" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -465,16 +514,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="780" extended-state="0" />
-    <editor active="false" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30346233" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2804878" sideWeight="0.6309227" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.6309227" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26327115" sideWeight="0.70448875" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42518702" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26327115" sideWeight="0.57481295" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42518702" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2977099" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29489052" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -521,30 +570,10 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="132" />
+      <option name="time" value="133" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/App/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="23" selection-start="224" selection-end="263" vertical-scroll-proportion="0.24249423" vertical-offset="0" max-vertical-offset="433" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="10" selection-start="221" selection-end="221" vertical-scroll-proportion="0.48498845" vertical-offset="15" max-vertical-offset="600" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/REST/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="65" selection-start="200" selection-end="200" vertical-scroll-proportion="0.2078522" vertical-offset="0" max-vertical-offset="433" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/less/bootstrap/grid.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="3" selection-start="386" selection-end="386" vertical-scroll-proportion="0.51724136" vertical-offset="0" max-vertical-offset="1275" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/less/bootstrap/bootstrap.less">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="36" selection-start="360" selection-end="360" vertical-scroll-proportion="0.58189654" vertical-offset="0" max-vertical-offset="825" />
@@ -555,21 +584,6 @@
         <state line="9" column="5" selection-start="331" selection-end="331" vertical-scroll-proportion="0.38681948" vertical-offset="0" max-vertical-offset="349" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/api/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="24" selection-start="369" selection-end="369" vertical-scroll-proportion="0.24193548" vertical-offset="0" max-vertical-offset="372" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/REST/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="18" selection-start="56" selection-end="56" vertical-scroll-proportion="0.12096774" vertical-offset="0" max-vertical-offset="372" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/api/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="40" selection-start="893" selection-end="893" vertical-scroll-proportion="0.9677419" vertical-offset="0" max-vertical-offset="675" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/context_processors.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="8" selection-start="274" selection-end="274" vertical-scroll-proportion="0.5241935" vertical-offset="0" max-vertical-offset="780" />
@@ -577,19 +591,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/templatetags/login.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="30" selection-start="206" selection-end="206" vertical-scroll-proportion="0.28225806" vertical-offset="0" max-vertical-offset="372" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/util/lodash.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="677" selection-end="677" vertical-scroll-proportion="0.0" vertical-offset="101253" max-vertical-offset="101850">
+        <state line="8" column="30" selection-start="206" selection-end="206" vertical-scroll-proportion="0.28225806" vertical-offset="0" max-vertical-offset="372">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/REST/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/static/js/util/lodash.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="72" selection-start="730" selection-end="730" vertical-scroll-proportion="0.2631579" vertical-offset="555" max-vertical-offset="1320" />
+        <state line="20" column="0" selection-start="677" selection-end="677" vertical-scroll-proportion="-132.44284" vertical-offset="100969" max-vertical-offset="101730">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/angular/rest/app/controllers/AppCtrl.js">
@@ -601,14 +612,72 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/angular/rest/app/directives/GroupEvents.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="20" selection-start="99" selection-end="99" vertical-scroll-proportion="0.1453958" vertical-offset="0" max-vertical-offset="619">
+        <state line="6" column="20" selection-start="99" selection-end="99" vertical-scroll-proportion="0.11826544" vertical-offset="0" max-vertical-offset="761">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/REST/templates/nav.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="27" selection-start="733" selection-end="733" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/REST/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="433">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/REST/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="433">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/angular/rest/app/templates/app.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="16" selection-start="697" selection-end="697" vertical-scroll-proportion="0.0" vertical-offset="267" max-vertical-offset="615">
+        <state line="30" column="16" selection-start="697" selection-end="697" vertical-scroll-proportion="-18.75" vertical-offset="0" max-vertical-offset="615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/REST/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="18" selection-start="56" selection-end="56" vertical-scroll-proportion="0.1039261" vertical-offset="0" max-vertical-offset="433">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/api/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="23" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/api/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="872" selection-end="872" vertical-scroll-proportion="0.6882217" vertical-offset="17" max-vertical-offset="450">
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/REST/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="72" selection-start="730" selection-end="730" vertical-scroll-proportion="0.33007336" vertical-offset="555" max-vertical-offset="1320">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/api/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="49" selection-start="680" selection-end="680" vertical-scroll-proportion="0.4503464" vertical-offset="90" max-vertical-offset="525">
           <folding />
         </state>
       </provider>
