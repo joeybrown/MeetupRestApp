@@ -12,14 +12,19 @@ def execute_meetup_api_action(meetup_api_uri, method, data, meetup_session, resp
 
     def execute_action(_meetup_api_uri, _method, _data, _meetup_session):
         if _method == 'GET':
-            return _meetup_session.get(_meetup_api_uri, params={_data})
+            return _meetup_session.get(_meetup_api_uri, params=_data)
         elif _method == 'POST':
-            return _meetup_session.post(_meetup_api_uri, params={_data})
+            return _meetup_session.post(_meetup_api_uri, params=_data)
         elif _method == 'DELETE':
-            return _meetup_session.delete(_meetup_api_uri, params={_data})
+            return _meetup_session.delete(_meetup_api_uri, params=_data)
         else:
             raise Exception('Error in creating Meetup Session', 'HTTP method is not recognized')
 
+    data=dict(data)
     response = execute_action(meetup_api_uri, method, data, meetup_session)
     json_response = get_json_response(response, response_index)
     return HttpResponse(json.dumps(json_response), content_type="application/json")
+
+
+def get_meetup_session_from_request(request):
+    return request.session['meetup_session']

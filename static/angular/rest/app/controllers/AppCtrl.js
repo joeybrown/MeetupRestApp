@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller('AppCtrl',  ['$scope', 'GroupInfo', 'GroupEvents', 'Api', function ($scope, GroupInfo, GroupEvents, Api) {
+app.controller('AppCtrl',  ['$scope', 'GroupInfo', 'GroupEvents', 'Rsvps', 'Api', function ($scope, GroupInfo, GroupEvents, Rsvps, Api) {
 
     $scope.notHiddenMeetups = function(meetup) {
         return !_.contains($scope.hiddenMeetups, meetup.name)
@@ -14,6 +14,13 @@ app.controller('AppCtrl',  ['$scope', 'GroupInfo', 'GroupEvents', 'Api', functio
         promise.then(function (data) {
             $scope.groupInfo = data;
             console.log($scope.groupInfo)
+        })
+    }
+
+    $scope.getRsvpsForEvent = function(event_id) {
+        var promise = Rsvps.getRsvpsForEvent(event_id);
+        promise.then(function (data) {
+            console.log(data)
         })
     }
 

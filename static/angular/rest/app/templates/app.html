@@ -8,13 +8,11 @@
         <span class="glyphicon glyphicon-new-window"></span>
     </a>
 </h2>
-<div>
-    <img src="{{ groupInfo.group_photo.photo_link }}">
-</div>
-
 
 <div class="row">
-
+    <div class="col col-lg-6">
+        <img ng-src="{{ groupInfo.group_photo.photo_link }}"/>
+    </div>
 
     <div class="group-topics col col-lg-6">
         <h3>Topics</h3>
@@ -25,12 +23,26 @@
         </ul>
     </div>
 
+</div>
+
+
+
+<div class="row">
+
+
+
+
     <div class="col col-lg-6">
         <h3>Upcoming Events</h3>
+        <!--
         <ul data-ng-repeat="event in groupEvents | filter:notHiddenMeetups">
             <li>
               <span data-group-event="event" data-hidden-meetups="hiddenMeetups"></span>
             </li>
         </ul>
+        -->
+
+
+
     </div>
 </div>
