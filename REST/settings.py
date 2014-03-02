@@ -38,8 +38,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'App',
-    'south',
     'gunicorn',
+    'south',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -62,7 +62,7 @@ WSGI_APPLICATION = 'REST.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'restDB'),
     }
 }
 
@@ -79,12 +79,26 @@ USE_L10N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.6/howto/static-files/
-
 STATIC_URL = '/static/'
 
 TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), '../', 'REST/templates').replace('\\','/'),
                  os.path.join(os.path.dirname(__file__), '../', 'App/templates').replace('\\','/'),
 )
+
+LOGGING = {
+    'version': 1,
+}
+
+TEMPLATE_CONTEXT_PROCESSORS = {
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'django.core.context_processors.tz',
+    'django.core.context_processors.request',
+    'django.contrib.messages.context_processors.messages',
+    'App.context_processors.log_in_processor',
+}
+
+SESSION_SERIALIZER = "django.contrib.sessions.serializers.PickleSerializer"

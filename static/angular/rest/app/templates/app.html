@@ -1,3 +1,36 @@
+<h1>
+    Welcome
+</h1>
+
+<h2>
+    <a href="{{ groupInfo.link }}" target="_blank">
+        <span data-ng-bind="groupInfo.name"></span>
+        <span class="glyphicon glyphicon-new-window"></span>
+    </a>
+</h2>
 <div>
-    THIS is the main angular app
+    <img src="{{ groupInfo.group_photo.photo_link }}">
+</div>
+
+
+<div class="row">
+
+
+    <div class="group-topics col col-lg-6">
+        <h3>Topics</h3>
+        <ul data-ng-repeat="topic in groupInfo.topics">
+            <li>
+                <span data-ng-bind="topic.name"></span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="col col-lg-6">
+        <h3>Upcoming Events</h3>
+        <ul data-ng-repeat="event in groupEvents | filter:notHiddenMeetups">
+            <li>
+              <span data-group-event="event" data-hidden-meetups="hiddenMeetups"></span>
+            </li>
+        </ul>
+    </div>
 </div>

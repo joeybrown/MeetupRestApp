@@ -22,6 +22,10 @@
 
 <body>
 
+{% block navbar %}
+{% include "nav.html" %}
+{% endblock %}
+
 <div class="container">
     {% block content %}
     {% endblock %}
@@ -39,6 +43,8 @@
 
 
 {% block scripts %}
+
+<script type="text/javascript" src="/static/js/util/lodash.js"></script>
 
 <script type="text/javascript" src="/static/js/jquery/jquery.js"></script>
 
@@ -64,6 +70,10 @@
 <script type="text/javascript" src="/static/angular/rest/app.js"></script>
 <script type="text/javascript" src="/static/angular/rest/app/App.js"></script>
 <script type="text/javascript" src="/static/angular/rest/app/controllers/AppCtrl.js"></script>
+<script type="text/javascript" src="/static/angular/rest/app/providers/Api.js"></script>
+<script type="text/javascript" src="/static/angular/rest/app/services/GroupInfo.js"></script>
+<script type="text/javascript" src="/static/angular/rest/app/services/GroupEvents.js"></script>
+<script type="text/javascript" src="/static/angular/rest/app/directives/GroupEvents.js"></script>
 {% endblock %}
 
 
