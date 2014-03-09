@@ -7,7 +7,9 @@
     </title>
 
     <link rel="stylesheet" href="/static/css/rest.css" />
-    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/site.css">
+    <link rel="stylesheet" href="/static/css/bootstrap-flat.css">
+    <link rel="stylesheet" href="/static/css/bootstrap-flat-extras.css">
 
     <base href="/">
 
@@ -35,9 +37,7 @@
 <div class="container">
     {% block footer %}
     <hr>
-    <footer>
-        <p>RESTful Application</p>
-    </footer>
+    <footer></footer>
     {% endblock %}
 </div>
 
@@ -45,14 +45,17 @@
 {% block scripts %}
 
 <script type="text/javascript" src="/static/js/util/lodash.js"></script>
+<script type="text/javascript" src="/static/js/util/custom.js"></script>
 
 <script type="text/javascript" src="/static/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="/static/js/util/scrollTo.js"></script>
 
 <script type="text/javascript" src="/static/js/angular/angular.js"></script>
 <script type="text/javascript" src="/static/js/angular/angular-animate.js"></script>
 <script type="text/javascript" src="/static/js/angular/angular-cookies.js"></script>
 <script type="text/javascript" src="/static/js/angular/angular-resource.js"></script>
 <script type="text/javascript" src="/static/js/angular/angular-route.js"></script>
+<script type="text/javascript" src="/static/js/angular/angular-sanitize.js"></script>
 
 <script type="text/javascript" src="/static/js/bootstrap/affix.js"></script>
 <script type="text/javascript" src="/static/js/bootstrap/alert.js"></script>
@@ -69,20 +72,22 @@
 
 <script type="text/javascript" src="/static/js/util/angular-ui-bootstrap.js"></script>
 
-
-
 <script type="text/javascript" src="/static/angular/rest/app.js"></script>
 <script type="text/javascript" src="/static/angular/rest/app/App.js"></script>
 <script type="text/javascript" src="/static/angular/rest/app/controllers/AppCtrl.js"></script>
-<script type="text/javascript" src="/static/angular/rest/app/providers/Api.js"></script>
+<script type="text/javascript" src="/static/angular/rest/app/controllers/GroupCtrl.js"></script>
+<script type="text/javascript" src="/static/angular/rest/app/directives/GroupEvents.js"></script>
+<script type="text/javascript" src="/static/angular/rest/app/directives/EventLocation.js"></script>
+<script type="text/javascript" src="/static/angular/rest/app/directives/EventFormField.js"></script>
+<script type="text/javascript" src="/static/angular/rest/app/directives/EventActions.js"></script>
 <script type="text/javascript" src="/static/angular/rest/app/services/GroupInfo.js"></script>
 <script type="text/javascript" src="/static/angular/rest/app/services/GroupEvents.js"></script>
 <script type="text/javascript" src="/static/angular/rest/app/services/Rsvps.js"></script>
-<script type="text/javascript" src="/static/angular/rest/app/directives/GroupEvents.js"></script>
+<script type="text/javascript" src="/static/angular/rest/app/providers/Events.js"></script>
+
+<script type="text/javascript" src="/static/angular/common/services/smooth-scroll.js"></script>
 
 {% endblock %}
-
-
 
 </body>
 </html>

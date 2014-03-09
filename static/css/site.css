@@ -1,0 +1,11 @@
+body {
+    background-image:url("../img/skulls.png");
+}
+
+.table > tbody > tr > td {
+    vertical-align: middle;
+}
+
+.brick-background {
+    background-image:url("../img/brickwall.png");
+}

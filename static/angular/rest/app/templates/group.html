@@ -1,0 +1,76 @@
+<div class="row">
+    <div class="col col-lg-12">
+        <h1> {{ groupInfo.name }} </h1>
+        <h3 data-ng-bind-html="groupInfo.description"></h3>
+        <img data-ng-src="{{ groupInfo.group_photo.photo_link }}"/>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col col-lg-12  brick-background">
+        <h1 id="upcomingEvents">
+            Upcoming Events
+        </h1>
+        <div>
+            <button class="btn btn-success" ng-click="openEditEventModal()"><span class="glyphicon glyphicon-plus"></span>&nbsp;Add Event!</button>
+        </div>
+
+        <div pagination="" class="pagination-sm" boundary-links="true"
+             total-items="eventsInfo.meta.total_count" page="pagination.pageNumber" max-size="5"
+             items-per-page="pagination.itemsPerPage" num-pages="pagination.numberOfPages"
+             on-select-page="pagination.selectPage(page)" last-text="{{ pagination.lastButtonText }}">
+        </div>
+        <div>
+            {{ itemsPerPage }} events/page
+        </div>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Location</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr data-ng-repeat="event in eventsInfo.results">
+                <td>{{ event.name }}</td>
+                <td>{{ epochToLocaleDate(event.time) }}</td>
+                <td>{{ epochToLocaleTime(event.time) }}</td>
+                <td data-event-location="event.venue"></td>
+                <td data-event-actions="event" data-open-edit-modal="openEditEventModal(event)"
+                    data-open-delete-modal="openDeleteEventModal(event)"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!--{#--><script type="text/ng-template" id="editEventModal.html"> <!--#}-->
+<div class="modal-header">
+    <h3>{{ labelText }}</h3>
+</div>
+<div class="modal-body">
+    <div data-event-form-field="" data-ng-model="event.name" data-label="Name"></div>
+    <div data-event-form-field="" data-ng-model="event.description" data-label="Description"></div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">{{ labelText }}</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>
+<!--{#-->    </script><!--#}-->
+
+<!--{#--><script type="text/ng-template" id="deleteEventModal.html"> <!--#}-->
+<div class="modal-header">
+    <h3>Delete Event</h3>
+</div>
+<div class="modal-body">
+    Are you sure you want to delete {{ event.name }}?
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="delete()">Delete</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>
+<!--{#-->    </script><!--#}-->

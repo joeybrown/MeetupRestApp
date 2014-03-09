@@ -1,38 +1,44 @@
-from utils import execute_meetup_api_action, get_meetup_session_from_request
+from utils import execute_meetup_api_action, get_meetup_session_from_request, get_meetup_params, get_rsvp_uri
+from django.views.decorators.csrf import csrf_exempt
+from django.http import QueryDict
+import json
 
 
-def get_data_from_request(method, get_dict, post_dict):
-    return get_dict if method == 'GET' else post_dict
-
-
-def get_group_info(request):
+def get_group_info(request, group_name):
     meetup_api_uri = '2/groups'
-    data = {'group_urlname': 'memphis-technology-user-groups'}
-    meetup_session = get_meetup_session_from_request(request)
-    return execute_meetup_api_action(meetup_api_uri, 'GET', data, meetup_session, 0)
-
-
-def get_group_events(request):
-    meetup_api_uri = '2/events'
-    data = {'group_urlname': 'memphis-technology-user-groups',
-            'page': 20}
+    data = {'group_urlname': group_name or 'memphis-technology-user-groups'}
     meetup_session = get_meetup_session_from_request(request)
     return execute_meetup_api_action(meetup_api_uri, 'GET', data, meetup_session)
 
 
-def rsvps(request, rsvp_id=None):
+def get_group_events(request):
+    def get_group_events_data(q):
+        d = {'page': 20, 'fields': 'self'}
+        d.update(q)
+        return d
+    meetup_api_uri = '2/events'
+    data = get_group_events_data(request.GET)
+    meetup_session = get_meetup_session_from_request(request)
+    return execute_meetup_api_action(meetup_api_uri, 'GET', data, meetup_session)
+
+
+@csrf_exempt
+def rsvp(request, rsvp_id=None, event_id=None):
     """
+    /rsvps/events/{event_id} - GET, POST the RSVPs for event
     http://www.meetup.com/meetup_api/docs/2/rsvps
     http://www.meetup.com/meetup_api/docs/2/rsvp/#create
+
+    /rsvps/{event_id} - GET the detail of a particular RSVP
     http://www.meetup.com/meetup_api/docs/2/rsvp/#get
     """
-    meetup_api_uri = '2/rsvps' if rsvp_id is None else '2/rsvps/{0}'.format(rsvp_id)
     method = request.method
-    data = dict(request.GET.iteritems()) if method == 'GET' else dict(request.POST.iteritems())
+    meetup_api_uri = get_rsvp_uri(rsvp_id, method)
+    data = get_meetup_params(request, {'rsvp_id': rsvp_id, 'event_id': event_id})
     meetup_session = get_meetup_session_from_request(request)
     return execute_meetup_api_action(meetup_api_uri, method, data, meetup_session)
 
-
+@csrf_exempt
 def event(request, event_id=None):
     """
     get all events as well to compare uri structure
@@ -41,9 +47,22 @@ def event(request, event_id=None):
     http://www.meetup.com/meetup_api/docs/2/event/#get
     http://www.meetup.com/meetup_api/docs/2/event/#delete
     """
+    #def get_patch_params(_meetup_session, _meetup_api_uri, request_body, _event_id):
+    #    request_body_dict = QueryDict(request_body)
+    #
+    #    response = execute_meetup_api_action(_meetup_api_uri, 'GET', {'event_id': _event_id}, _meetup_session)
+    #    response_data = json.loads(response.DATA)
+    #
+    #    response_data.update(request_body_dict)  # merge the two dicts
+    #    return response_data
+
     meetup_api_uri = '2/event' if event_id is None else '2/event/{0}'.format(event_id)
     method = request.method
-    data = request.REQUEST
+    data = get_meetup_params(request, {'event_id': event_id})
+
+    #if request.method == 'PATCH':
+    #    data = get_patch_params(QueryDict(request.body), event_id)
+
     meetup_session = get_meetup_session_from_request(request)
     return execute_meetup_api_action(meetup_api_uri, method, data, meetup_session)
 

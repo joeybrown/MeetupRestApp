@@ -1,48 +1,43 @@
-<h1>
-    Welcome
-</h1>
-
-<h2>
-    <a href="{{ groupInfo.link }}" target="_blank">
-        <span data-ng-bind="groupInfo.name"></span>
-        <span class="glyphicon glyphicon-new-window"></span>
-    </a>
-</h2>
-
 <div class="row">
-    <div class="col col-lg-6">
-        <img ng-src="{{ groupInfo.group_photo.photo_link }}"/>
-    </div>
+    <div class="col col-lg-12">
+        <h1>
+            Welcome
+        </h1>
 
-    <div class="group-topics col col-lg-6">
-        <h3>Topics</h3>
-        <ul data-ng-repeat="topic in groupInfo.topics">
-            <li>
-                <span data-ng-bind="topic.name"></span>
-            </li>
-        </ul>
+        <h3>
+            This site exists as a demo for the Memphis Web Workers User Group.
+        </h3>
     </div>
 
 </div>
 
-
-
-<div class="row">
-
-
-
-
-    <div class="col col-lg-6">
-        <h3>Upcoming Events</h3>
-        <!--
-        <ul data-ng-repeat="event in groupEvents | filter:notHiddenMeetups">
-            <li>
-              <span data-group-event="event" data-hidden-meetups="hiddenMeetups"></span>
-            </li>
-        </ul>
-        -->
-
-
-
+<div class="row panel panel-success" data-ng-repeat="group in groups">
+    <div class="panel-heading">
+        <div class="panel-title">
+            {{ group.name }} - {{ group.members }} {{ group.who }}
+        </div>
     </div>
+    <div class="panel-body">
+        <p>
+            {{ group.city }}, {{ group.state }}
+        </p>
+        <div class="callout callout-info">
+            <span data-ng-bind-html="group.description"></span>
+        </div>
+
+        <div class="row">
+            <div class="col col-lg-6">
+                <img data-ng-src="{{ group.group_photo.photo_link }}"/>
+            </div>
+            <div class="col col-lg-offset-1 col-lg-5 group-topics">
+                <h3>Topics</h3>
+                <ul data-ng-repeat="topic in group.topics">
+                    <li>
+                        <span data-ng-bind="topic.name"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
 </div>

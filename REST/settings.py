@@ -40,6 +40,8 @@ INSTALLED_APPS = (
     'App',
     'gunicorn',
     'south',
+    'requests',
+    'tastypie',
 )
 
 MIDDLEWARE_CLASSES = (
