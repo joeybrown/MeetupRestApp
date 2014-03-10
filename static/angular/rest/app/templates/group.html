@@ -16,7 +16,7 @@
         <h1 id="upcomingEvents">
             Upcoming Events
         </h1>
-        <div>
+        <div data-ng-show="showAddEventButton()">
             <button class="btn btn-success" ng-click="openEditEventModal()"><span class="glyphicon glyphicon-plus"></span>&nbsp;Add Event!</button>
         </div>
 
@@ -26,7 +26,7 @@
              on-select-page="pagination.selectPage(page)" last-text="{{ pagination.lastButtonText }}">
         </div>
         <div>
-            {{ itemsPerPage }} events/page
+            {{ pagination.itemsPerPage }} events/page
         </div>
         <table class="table table-striped">
             <thead>

@@ -1,6 +1,6 @@
 app.directive('eventActions', [function() {
 
-    var template = '<span data-ng-show="showEditButton">\n    <span class="btn btn-info" data-ng-click="openEditEventModal({event: event})">\n        <span class="glyphicon glyphicon-pencil"></span>\n    </span>\n</span>\n\n<span data-ng-show="showDeleteButton">\n    <span class="btn btn-danger" data-ng-click="openDeleteEventModal({event: event})">\n        <span class="glyphicon glyphicon-remove"></span>\n    </span>\n</span>\n\n<span data-ng-show="showRsvpButton && loadedRsvpStatus">\n    <span data-ng-show="rsvpForUser[0].response === \'yes\'">\n        <span class="btn btn-success" data-ng-click="openDeleteRsvpModal({rsvpId: rsvpId})">\n            <span class="glyphicon glyphicon-tag"></span>\n        </span>\n    </span>\n    \n    <span data-ng-show="rsvpForUser[0].response !== \'yes\'">\n        <span class="btn btn-danger" data-ng-click="openEditRsvpModal({eventId: eventId, rsvpId: null})">\n            <span class="glyphicon glyphicon-tag"></span>\n        </span>\n    </span>\n    \n</span>'
+    var template = '<span data-ng-show="showEditButton">\n    <span class="btn btn-info" data-ng-click="openEditEventModal({event: event})">\n        <span class="glyphicon glyphicon-pencil"></span>\n    </span>\n</span>\n\n<span data-ng-show="showDeleteButton">\n    <span class="btn btn-danger" data-ng-click="openDeleteEventModal({event: event})">\n        <span class="glyphicon glyphicon-remove"></span>\n    </span>\n</span>\n\n<span data-ng-show="showRsvpButton && loadedRsvpStatus">\n    <span data-ng-show="">\n        <span class="btn btn-success" data-ng-click="openDeleteRsvpModal({rsvpId: rsvpId})">\n            <span class="glyphicon glyphicon-tag"></span>\n        </span>\n    </span>\n    \n    <span data-ng-show="rsvpForUser[0].response !== \'yes\'">\n        <span class="btn btn-danger" data-ng-click="openEditRsvpModal({eventId: eventId, rsvpId: null})">\n            <span class="glyphicon glyphicon-tag"></span>\n        </span>\n    </span>\n    \n</span>'
 
     var controller = ['$scope', '$q', 'RsvpResource', function($scope, $q, RsvpResource) {
         var getRsvpStatus = function() {
@@ -48,7 +48,7 @@ app.directive('eventActions', [function() {
             openDeleteEventModal: '&',
             openEditRsvpModal: '&',
             openDeleteRsvpModal: '&',
-            userId: '@',
+            userId: '@'
         },
         template: template,
         controller: controller

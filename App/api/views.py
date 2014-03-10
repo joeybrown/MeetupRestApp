@@ -6,7 +6,7 @@ import json
 
 def get_group_info(request, group_name):
     meetup_api_uri = '2/groups'
-    data = {'group_urlname': group_name or 'memphis-technology-user-groups'}
+    data = {'group_urlname': group_name or 'memphis-technology-user-groups', 'fields': 'self'}
     meetup_session = get_meetup_session_from_request(request)
     return execute_meetup_api_action(meetup_api_uri, 'GET', data, meetup_session)
 

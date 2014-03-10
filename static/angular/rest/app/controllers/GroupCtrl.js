@@ -8,6 +8,12 @@ app.controller('GroupCtrl',  ['$scope', '$routeParams', '$location', '$modal', '
         $scope.eventsInfo = Group.EventsInfo;
         $scope.userId = Group.UserId;
 
+        $scope.showAddEventButton = function() {
+            return _.contains($scope.groupInfo.self.actions, 'event_create')
+        }
+
+        console.log($scope.groupInfo);
+
         var reloadPage = function() {
             $timeout(function() {
                 $route.reload();
