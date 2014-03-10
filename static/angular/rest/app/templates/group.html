@@ -65,25 +65,25 @@
 
 
     <div class="row">
-        <div class="col-lg-2" style="margin-bottom: 10px">
+        <div class="col-lg-2" style="margin-top: 10px">
             <label for="field-date">Date</label>
         </div>
         <div class="col-lg-10">
             <div style="display:inline-block; min-height:290px;">
-                <div class="well well-sm" ng-model="dt">
-                    <datepicker min="minDate" show-weeks="showWeeks"></datepicker>
+                <div class="well well-sm" ng-model="event.time">
+                    <datepicker min="minDate" show-weeks="false"></datepicker>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-lg-2" style="margin-bottom: 10px">
+        <div class="col-lg-2" style="margin-top: 10px">
             <label>Time</label>
         </div>
         <div class="col-lg-10">
-            <div ng-model="mytime" ng-change="changed()" style="display:inline-block;">
-                <timepicker hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
+            <div ng-model="event.time" style="display:inline-block;">
+                <timepicker></timepicker>
             </div>
         </div>
     </div>
@@ -120,7 +120,7 @@
     You are presently not RSVP'd to attend this event. Would you like to attend?
 </div>
 <div class="modal-footer">
-    <button class="btn btn-primary" ng-click="ok()">Attend Event</button>
+    <button class="btn btn-primary" ng-click="ok()">Attending Event</button>
     <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
 </div>
 <!--{#-->    </script><!--#}-->
@@ -133,7 +133,7 @@
     You are presently RSVP'd to attend this event. Are you sure you no longer want to attend this event?
 </div>
 <div class="modal-footer">
-    <button class="btn btn-danger" ng-click="ok()">Delete Event</button>
+    <button class="btn btn-danger" ng-click="ok()">Not Attending Event</button>
     <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
 </div>
 <!--{#-->    </script><!--#}-->

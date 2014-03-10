@@ -9,7 +9,9 @@ app.controller('GroupCtrl',  ['$scope', '$routeParams', '$location', '$modal', '
         $scope.userId = Group.UserId;
 
         var reloadPage = function() {
-            $route.reload();
+            $timeout(function() {
+                $route.reload();
+            });
         };
 
         $scope.pagination = (function () {
@@ -58,8 +60,7 @@ app.controller('GroupCtrl',  ['$scope', '$routeParams', '$location', '$modal', '
             return new Date(epoch).toLocaleDateString();
         }
 
-        $scope.openEditEventModal = function (event) {
-            console.log('hey')
+        $scope.openEditEventModal = function (event, groupId) {
             var modalInstance = $modal.open({
                 templateUrl: 'editEventModal.html',
                 controller: EditEventModalInstanceCtrl,
@@ -67,10 +68,13 @@ app.controller('GroupCtrl',  ['$scope', '$routeParams', '$location', '$modal', '
                     event: function () {
                         if (event) return event;
                         return null;
+                    },
+                    groupId: function() {
+                        if (groupId) return groupId;
+                        return null;
                     }
                 }
             });
-
             modalInstance.result.then(
                 function () {
                     reloadPage()
@@ -88,7 +92,6 @@ app.controller('GroupCtrl',  ['$scope', '$routeParams', '$location', '$modal', '
                     }
                 }
             });
-
             modalInstance.result.then(
                 function () {
                     reloadPage();
@@ -109,7 +112,6 @@ app.controller('GroupCtrl',  ['$scope', '$routeParams', '$location', '$modal', '
                     }
                 }
             });
-
             modalInstance.result.then(
                 function () {
                     reloadPage();
@@ -127,7 +129,6 @@ app.controller('GroupCtrl',  ['$scope', '$routeParams', '$location', '$modal', '
                     }
                 }
             });
-
             modalInstance.result.then(
                 function () {
                     reloadPage();
@@ -137,7 +138,7 @@ app.controller('GroupCtrl',  ['$scope', '$routeParams', '$location', '$modal', '
 
     }]);
 
-var EditEventModalInstanceCtrl = ['$scope', '$modalInstance', 'Events', 'event', function ($scope, $modalInstance, Events, event) {
+var EditEventModalInstanceCtrl = ['$scope', '$routeParams', '$modalInstance', 'EventResource', 'event', function ($scope, $routeParams, $modalInstance, EventResource, event) {
 
     var isNew = event ? false : true;
 
@@ -145,128 +146,59 @@ var EditEventModalInstanceCtrl = ['$scope', '$modalInstance', 'Events', 'event',
         $scope.event = {};
         $scope.labelText = 'Create Event';
     } else {
-        console.log($scope.event);
+        console.log(event);
         $scope.event = event;
         $scope.labelText = 'Edit Event';
     }
 
     $scope.ok = function () {
         if (isNew) {
-            var eventResource = new Events();
-            eventResource.name = 'hello'
+            var eventResource = new EventResource();
+            eventResource.name = $scope.event.name;
+            eventResource.time = new Date($scope.event.time).getTime();
+            eventResource.description = $scope.event.description;
+            eventResource.group_urlname = $routeParams.groupUrlName;
+            eventResource.announce = true;
             eventResource.$save();
         } else {
-            var eventResource = new Events()
-            eventResource.name = 'shit'
-            eventResource.update({id: event.id});
+            var eventResource = new EventResource();
+            eventResource.name = $scope.event.name;
+            eventResource.time = new Date($scope.event.time).getTime();
+            eventResource.description = $scope.event.description;
+            eventResource.group_urlname = $routeParams.groupUrlName;
+            EventResource.update({id: event.id}, eventResource)
         }
-
-
-        $modalInstance.close(69);
+        $modalInstance.close();
     };
 
     $scope.cancel = function () {
-        $modalInstance.dismiss('shit');
+        $modalInstance.dismiss();
     };
 
-    $scope.today = function() {
-        $scope.dt = new Date();
-    };
-    $scope.today();
-
-    $scope.showWeeks = true;
-    $scope.toggleWeeks = function () {
-        $scope.showWeeks = ! $scope.showWeeks;
-    };
-
-    $scope.clear = function () {
-        $scope.dt = null;
-    };
-
-    // Disable weekend selection
-    $scope.disabled = function(date, mode) {
-        return ( mode === 'day' && ( date.getDay() === 0 || date.getDay() === 6 ) );
-    };
-
-    $scope.toggleMin = function() {
-        $scope.minDate = ( $scope.minDate ) ? null : new Date();
-    };
-    $scope.toggleMin();
-
-    $scope.open = function($event) {
-        $event.preventDefault();
-        $event.stopPropagation();
-
-        $scope.opened = true;
-    };
-
-    $scope.dateOptions = {
-        'year-format': "'yy'",
-        'starting-day': 1
-    };
-
-    $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'shortDate'];
-    $scope.format = $scope.formats[0];
-
-
-
-
-    $scope.mytime = new Date();
-
-    $scope.hstep = 1;
-    $scope.mstep = 15;
-
-    $scope.options = {
-        hstep: [1, 2, 3],
-        mstep: [1, 5, 10, 15, 25, 30]
-    };
-
-    $scope.ismeridian = true;
-    $scope.toggleMode = function() {
-        $scope.ismeridian = ! $scope.ismeridian;
-    };
-
-    $scope.update = function() {
-        var d = new Date();
-        d.setHours( 14 );
-        d.setMinutes( 0 );
-        $scope.mytime = d;
-    };
-
-    $scope.changed = function () {
-        console.log('Time changed to: ' + $scope.mytime);
-    };
-
-    $scope.clear = function() {
-        $scope.mytime = null;
-    };
-
+    if (!$scope.event.time) {
+        $scope.event.time = new Date();
+    }
+    $scope.minDate = new Date();
 
 }];
 
-var DeleteEventModalInstanceCtrl = ['$scope', '$modalInstance', 'Events', 'event', function ($scope, $modalInstance, Events, event) {
+var DeleteEventModalInstanceCtrl = ['$scope', '$modalInstance', 'EventResource', 'event', function ($scope, $modalInstance, EventResource, event) {
 
     $scope.event = event;
 
-    console.log(event);
-    console.log(event);
-
     $scope.delete = function () {
-        Events.delete({id: event.id});
-        $modalInstance.close('fuck')
+        EventResource.delete({id: event.id});
+        $modalInstance.close()
     };
 
     $scope.cancel = function () {
-        $modalInstance.dismiss('shit');
+        $modalInstance.dismiss();
     };
 }];
 
-var EditRsvpModalInstanceCtrl = ['$scope', '$modalInstance', 'Rsvps', 'rsvpId', 'eventId', function ($scope, $modalInstance, Rsvps, rsvpId, eventId) {
+var EditRsvpModalInstanceCtrl = ['$scope', '$modalInstance', 'RsvpResource', 'rsvpId', 'eventId', function ($scope, $modalInstance, RsvpResource, rsvpId, eventId) {
 
     var isNew = rsvpId ? false : true;
-
-    console.log(rsvpId);
-    console.log(eventId);
 
     if (isNew) {
         $scope.event = {};
@@ -278,12 +210,14 @@ var EditRsvpModalInstanceCtrl = ['$scope', '$modalInstance', 'Rsvps', 'rsvpId', 
 
     $scope.ok = function () {
         if (isNew) {
-            var rsvpResource = new Rsvps();
+            var rsvpResource = new RsvpResource();
             rsvpResource.event_id = eventId;
+            rsvpResource.rsvp = 'yes';
             rsvpResource.$save();
         } else {
-            var rsvpResource = new Rsvps()
-            rsvpResource.update({id: rsvpId});
+            var rsvpResource = new RsvpResource()
+            rsvpResource.rsvp = 'yes';
+            RsvpResource.update({id: rsvpId}, rsvpResource);
         }
 
         $modalInstance.close(69);
@@ -295,35 +229,17 @@ var EditRsvpModalInstanceCtrl = ['$scope', '$modalInstance', 'Rsvps', 'rsvpId', 
 
 }];
 
-var DeleteRsvpModalInstanceCtrl = ['$scope', '$modalInstance', 'Rsvps', 'rsvpId', function ($scope, $modalInstance, Rsvps, rsvpId) {
-
-    var isNew = rsvpId ? false : true;
-
-    console.log(rsvpId);
-
-    if (isNew) {
-        $scope.event = {};
-        $scope.labelText = 'Create Rsvp';
-    } else {
-        $scope.event = event;
-        $scope.labelText = 'Edit Rsvp';
-    }
+var DeleteRsvpModalInstanceCtrl = ['$scope', '$modalInstance', 'RsvpResource', 'rsvpId', function ($scope, $modalInstance, RsvpResource, rsvpId) {
 
     $scope.ok = function () {
-        if (isNew) {
-            var rsvpResource = new Rsvps();
-            rsvpResource.event_id = eventId;
-            rsvpResource.$save();
-        } else {
-            var rsvpResource = new Rsvps()
-            rsvpResource.update({id: rsvpId});
-        }
-
-        $modalInstance.close(69);
+        var rsvpResource = new RsvpResource()
+        rsvpResource.rsvp = 'no';
+        RsvpResource.update({id: rsvpId}, rsvpResource);
+        $modalInstance.close();
     };
 
     $scope.cancel = function () {
-        $modalInstance.dismiss('shit');
+        $modalInstance.dismiss();
     };
 
 }];

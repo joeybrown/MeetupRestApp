@@ -27,53 +27,115 @@
     <favorites_list name="REST" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="GroupCtrl.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/angular/rest/app/controllers/GroupCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="131" column="26" selection-start="4568" selection-end="4568" vertical-scroll-proportion="0.40425533" vertical-offset="1050" max-vertical-offset="2100">
-              <folding>
-                <element signature="e#520#560#0" expanded="false" />
-                <element signature="e#604#2051#0" expanded="false" />
-                <element signature="e#2107#2212#0" expanded="false" />
-                <element signature="e#2265#2370#0" expanded="false" />
-                <element signature="e#4693#7057#0" expanded="false" />
-                <element signature="e#5073#5421#0" expanded="false" />
-                <element signature="e#7095#7472#0" expanded="false" />
-                <element signature="e#7507#8313#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="group.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/angular/rest/app/templates/group.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="0" selection-start="2481" selection-end="2481" vertical-scroll-proportion="-15.875" vertical-offset="564" max-vertical-offset="1980">
-              <folding>
-                <element signature="tag#div#2" expanded="false" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#3;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#3;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#3;n#div#3;n#!!top" expanded="true" />
-                <element signature="tag#div#4" expanded="false" />
-                <element signature="tag#div#5" expanded="false" />
-                <element signature="tag#div#6" expanded="false" />
-                <element signature="tag#div#7" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventFormField.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/angular/rest/app/directives/EventFormField.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="20" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="vertical" split-proportion="0.6744488">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="GroupCtrl.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/static/angular/rest/app/controllers/GroupCtrl.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="242" column="6" selection-start="8053" selection-end="8053" vertical-scroll-proportion="-13.32" vertical-offset="2157" max-vertical-offset="2610">
+                  <folding>
+                    <element signature="e#520#614#0" expanded="false" />
+                    <element signature="e#3210#3675#0" expanded="false" />
+                    <element signature="e#3256#3528#0" expanded="false" />
+                    <element signature="e#4365#4830#0" expanded="false" />
+                    <element signature="e#4411#4683#0" expanded="false" />
+                    <element signature="e#4876#6337#0" expanded="false" />
+                    <element signature="e#5074#5151#0" expanded="false" />
+                    <element signature="e#5157#5263#0" expanded="false" />
+                    <element signature="e#5293#6146#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="EventActions.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/static/angular/rest/app/directives/EventActions.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="2" column="20" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/REST/templates/base.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="87" column="83" selection-start="3889" selection-end="3889" vertical-scroll-proportion="-14.333333" vertical-offset="961" max-vertical-offset="1515">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/App/api/views.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="54" column="93" selection-start="2229" selection-end="2229" vertical-scroll-proportion="0.0" vertical-offset="542" max-vertical-offset="1080">
+                  <folding>
+                    <element signature="e#0#109#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Rsvps.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/static/angular/rest/app/services/Rsvps.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="8" column="32" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="RsvpResource.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/static/angular/rest/app/providers/RsvpResource.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="4" column="40" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="utils.py" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/App/api/utils.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="5" column="94" selection-start="186" selection-end="186" vertical-scroll-proportion="0.057026476" vertical-offset="47" max-vertical-offset="1245">
+                  <folding>
+                    <element signature="e#0#11#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="group.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/static/angular/rest/app/templates/group.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="48" column="78" selection-start="1886" selection-end="1886" vertical-scroll-proportion="-2.5" vertical-offset="660" max-vertical-offset="2160">
+                  <folding>
+                    <element signature="n#style#0;n#div#0;n#div#2;n#div#3;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#3;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#3;n#div#3;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="DjangoTemplate Fragment (EventActions.js:64).html" pinned="false" current="false" current-in-tab="true">
+            <entry file="mock:///DjangoTemplate Fragment (EventActions.js:64).html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="13" column="49" selection-start="508" selection-end="508" vertical-scroll-proportion="0.140625" vertical-offset="168" max-vertical-offset="465">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -83,22 +145,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/static/angular/rest/app/directives/EventFormField.js" />
-        <option value="$PROJECT_DIR$/static/angular/rest/app/providers/Events.js" />
-        <option value="$PROJECT_DIR$/static/angular/rest/app/directives/EventRsvp.js" />
         <option value="$PROJECT_DIR$/App/api/utils.py" />
         <option value="$PROJECT_DIR$/App/api/urls.py" />
         <option value="$PROJECT_DIR$/App/api/views.py" />
         <option value="$PROJECT_DIR$/static/angular/rest/app/services/UserId.js" />
-        <option value="$PROJECT_DIR$/REST/templates/base.html" />
         <option value="$PROJECT_DIR$/static/angular/rest/app/App.js" />
         <option value="$PROJECT_DIR$/static/angular/rest/app/services/Rsvps.js" />
         <option value="$PROJECT_DIR$/static/angular/rest/app/providers/Rsvps.js" />
-        <option value="/DjangoTemplate Fragment (EventActions.js:64).html" />
-        <option value="$PROJECT_DIR$/static/angular/rest/app/directives/EventActions.js" />
-        <option value="$PROJECT_DIR$/static/angular/rest/app/templates/group.html" />
         <option value="/DjangoTemplate Fragment (EventFormField.js:65).html" />
+        <option value="$PROJECT_DIR$/static/angular/rest/app/providers/Events.js" />
+        <option value="$PROJECT_DIR$/static/angular/rest/app/providers/EventResource.js" />
+        <option value="$PROJECT_DIR$/static/angular/rest/app/templates/group.html" />
+        <option value="$PROJECT_DIR$/REST/templates/base.html" />
+        <option value="$PROJECT_DIR$/static/angular/rest/app/providers/RsvpResource.js" />
+        <option value="$PROJECT_DIR$/static/angular/rest/app/directives/EventActions.js" />
         <option value="$PROJECT_DIR$/static/angular/rest/app/controllers/GroupCtrl.js" />
+        <option value="/DjangoTemplate Fragment (EventActions.js:64).html" />
       </list>
     </option>
   </component>
@@ -742,43 +804,13 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="317" />
+      <option name="time" value="342" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.virtualenvs/REST/lib/python2.7/site-packages/requests/packages/urllib3/response.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="293" column="0" selection-start="9934" selection-end="9934" vertical-scroll-proportion="0.49528936" vertical-offset="3937" max-vertical-offset="4680">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/api/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="40" selection-start="467" selection-end="467" vertical-scroll-proportion="0.20188425" vertical-offset="0" max-vertical-offset="743">
-          <folding>
-            <element signature="e#0#51#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/api/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="12" selection-end="48" vertical-scroll-proportion="0.020188425" vertical-offset="0" max-vertical-offset="1245">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/angular/rest/app/services/UserId.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="5" selection-start="370" selection-end="370" vertical-scroll-proportion="0.22207268" vertical-offset="0" max-vertical-offset="743">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/REST/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="70" selection-start="3686" selection-end="3686" vertical-scroll-proportion="0.68706536" vertical-offset="781" max-vertical-offset="1515">
           <folding />
         </state>
       </provider>
@@ -806,29 +838,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/api/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="693" selection-end="693" vertical-scroll-proportion="0.3230148" vertical-offset="0" max-vertical-offset="1080">
-          <folding>
-            <element signature="e#0#109#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/angular/rest/app/services/Rsvps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="38" selection-start="305" selection-end="305" vertical-scroll-proportion="0.252809" vertical-offset="0" max-vertical-offset="356">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/angular/rest/app/providers/Rsvps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="8" selection-start="168" selection-end="168" vertical-scroll-proportion="0.16853933" vertical-offset="0" max-vertical-offset="356">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/angular/rest/app/services/GroupEvents.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="33" selection-start="318" selection-end="318" vertical-scroll-proportion="0.252809" vertical-offset="0" max-vertical-offset="450">
@@ -836,48 +845,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/angular/rest/app/directives/EventActions.js">
+    <entry file="file://$PROJECT_DIR$/REST/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="43" selection-start="1718" selection-end="1718" vertical-scroll-proportion="0.24781342" vertical-offset="200" max-vertical-offset="930">
+        <state line="2" column="0" selection-start="37" selection-end="37" vertical-scroll-proportion="0.06122449" vertical-offset="0" max-vertical-offset="490">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/angular/rest/app/providers/EventResource.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="41" selection-start="209" selection-end="209" vertical-scroll-proportion="0.12244898" vertical-offset="0" max-vertical-offset="490">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/angular/rest/app/directives/EventFormField.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="38" selection-start="430" selection-end="430" vertical-scroll-proportion="0.12578617" vertical-offset="0" max-vertical-offset="477">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/angular/rest/app/templates/group.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="0" selection-start="2481" selection-end="2481" vertical-scroll-proportion="-15.875" vertical-offset="564" max-vertical-offset="1980">
+        <state line="48" column="78" selection-start="1886" selection-end="1886" vertical-scroll-proportion="-2.5" vertical-offset="660" max-vertical-offset="2160">
           <folding>
-            <element signature="tag#div#2" expanded="false" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#3;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#3;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#3;n#div#3;n#!!top" expanded="true" />
-            <element signature="tag#div#4" expanded="false" />
-            <element signature="tag#div#5" expanded="false" />
-            <element signature="tag#div#6" expanded="false" />
-            <element signature="tag#div#7" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/angular/rest/app/directives/EventFormField.js">
+    <entry file="file://$PROJECT_DIR$/static/angular/rest/app/providers/RsvpResource.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="20" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+        <state line="4" column="40" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/angular/rest/app/controllers/GroupCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="26" selection-start="4568" selection-end="4568" vertical-scroll-proportion="0.40425533" vertical-offset="1050" max-vertical-offset="2100">
+        <state line="242" column="6" selection-start="8053" selection-end="8053" vertical-scroll-proportion="-13.32" vertical-offset="2157" max-vertical-offset="2610">
           <folding>
-            <element signature="e#520#560#0" expanded="false" />
-            <element signature="e#604#2051#0" expanded="false" />
-            <element signature="e#2107#2212#0" expanded="false" />
-            <element signature="e#2265#2370#0" expanded="false" />
-            <element signature="e#4693#7057#0" expanded="false" />
-            <element signature="e#5073#5421#0" expanded="false" />
-            <element signature="e#7095#7472#0" expanded="false" />
-            <element signature="e#7507#8313#0" expanded="false" />
+            <element signature="e#520#614#0" expanded="false" />
+            <element signature="e#3210#3675#0" expanded="false" />
+            <element signature="e#3256#3528#0" expanded="false" />
+            <element signature="e#4365#4830#0" expanded="false" />
+            <element signature="e#4411#4683#0" expanded="false" />
+            <element signature="e#4876#6337#0" expanded="false" />
+            <element signature="e#5074#5151#0" expanded="false" />
+            <element signature="e#5157#5263#0" expanded="false" />
+            <element signature="e#5293#6146#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/angular/rest/app/services/Rsvps.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="32" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/REST/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="83" selection-start="3889" selection-end="3889" vertical-scroll-proportion="-14.333333" vertical-offset="961" max-vertical-offset="1515">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/angular/rest/app/directives/EventActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="20" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/api/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="93" selection-start="2229" selection-end="2229" vertical-scroll-proportion="0.0" vertical-offset="542" max-vertical-offset="1080">
+          <folding>
+            <element signature="e#0#109#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/api/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="94" selection-start="186" selection-end="186" vertical-scroll-proportion="0.057026476" vertical-offset="47" max-vertical-offset="1245">
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
