@@ -1,11 +1,15 @@
 <div class="row">
     <div class="col col-lg-12">
         <h1> {{ groupInfo.name }} </h1>
-        <h3 data-ng-bind-html="groupInfo.description"></h3>
+        <div class="callout callout-success">
+            <h3 data-ng-bind-html="groupInfo.description"></h3>
+        </div>
         <img data-ng-src="{{ groupInfo.group_photo.photo_link }}"/>
     </div>
 
 </div>
+
+
 
 <div class="row">
     <div class="col col-lg-12  brick-background">
@@ -40,8 +44,11 @@
                 <td>{{ epochToLocaleDate(event.time) }}</td>
                 <td>{{ epochToLocaleTime(event.time) }}</td>
                 <td data-event-location="event.venue"></td>
-                <td data-event-actions="event" data-open-edit-modal="openEditEventModal(event)"
-                    data-open-delete-modal="openDeleteEventModal(event)"></td>
+                <td data-event-actions="event" data-user-id="{{ userId }}"
+                    data-open-edit-event-modal="openEditEventModal(event)"
+                    data-open-delete-event-modal="openDeleteEventModal(event)"
+                    data-open-edit-rsvp-modal="openEditRsvpModal(eventId, rsvpId)"
+                    data-open-delete-rsvp-modal="openDeleteRsvpModal(rsvpId)"></td>
             </tr>
             </tbody>
         </table>
@@ -55,12 +62,41 @@
 <div class="modal-body">
     <div data-event-form-field="" data-ng-model="event.name" data-label="Name"></div>
     <div data-event-form-field="" data-ng-model="event.description" data-label="Description"></div>
+
+
+    <div class="row">
+        <div class="col-lg-2" style="margin-bottom: 10px">
+            <label for="field-date">Date</label>
+        </div>
+        <div class="col-lg-10">
+            <div style="display:inline-block; min-height:290px;">
+                <div class="well well-sm" ng-model="dt">
+                    <datepicker min="minDate" show-weeks="showWeeks"></datepicker>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-2" style="margin-bottom: 10px">
+            <label>Time</label>
+        </div>
+        <div class="col-lg-10">
+            <div ng-model="mytime" ng-change="changed()" style="display:inline-block;">
+                <timepicker hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
+            </div>
+        </div>
+    </div>
+
+
+
 </div>
 <div class="modal-footer">
     <button class="btn btn-primary" ng-click="ok()">{{ labelText }}</button>
     <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
 </div>
 <!--{#-->    </script><!--#}-->
+
 
 <!--{#--><script type="text/ng-template" id="deleteEventModal.html"> <!--#}-->
 <div class="modal-header">
@@ -71,6 +107,33 @@
 </div>
 <div class="modal-footer">
     <button class="btn btn-primary" ng-click="delete()">Delete</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>
+<!--{#-->    </script><!--#}-->
+
+
+<!--{#--><script type="text/ng-template" id="editRsvpModal.html"> <!--#}-->
+<div class="modal-header">
+    <h3>Attend Event</h3>
+</div>
+<div class="modal-body">
+    You are presently not RSVP'd to attend this event. Would you like to attend?
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">Attend Event</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>
+<!--{#-->    </script><!--#}-->
+
+<!--{#--><script type="text/ng-template" id="deleteRsvpModal.html"> <!--#}-->
+<div class="modal-header">
+    <h3>DELETE RSVP</h3>
+</div>
+<div class="modal-body">
+    You are presently RSVP'd to attend this event. Are you sure you no longer want to attend this event?
+</div>
+<div class="modal-footer">
+    <button class="btn btn-danger" ng-click="ok()">Delete Event</button>
     <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
 </div>
 <!--{#-->    </script><!--#}-->

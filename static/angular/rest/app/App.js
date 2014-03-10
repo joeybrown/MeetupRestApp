@@ -43,14 +43,15 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: '/static/angular/rest/app/templates/group.html',
             reloadOnSearch: false,
             resolve: {
-                Group: ['$q', '$route', 'GroupInfo', 'GroupEvents', function($q, $route, GroupInfo, GroupEvents) {
+                Group: ['$q', '$route', 'GroupInfo', 'GroupEvents', 'UserId', function($q, $route, GroupInfo, GroupEvents, UserId) {
                     var params = {
                         groupUrlName: $route.current.params.groupUrlName,
                         page: $route.current.params.page,
                         offset: $route.current.params.offset
                     }
                     var groupDeferred = $q.defer(),
-                        eventsDeferred = $q.defer();
+                        eventsDeferred = $q.defer(),
+                        userIdDeferred = $q.defer();
 
                     var groupPromise = GroupInfo.getGroupInfo(params.groupUrlName);
                     groupPromise.then(function (data) {
@@ -62,14 +63,21 @@ app.config(['$routeProvider', function ($routeProvider) {
                         eventsDeferred.resolve(data);
                     })
 
+                    var userIdPromise = UserId.getUserId();
+                    userIdPromise.then(function (data) {
+                        userIdDeferred.resolve(data);
+                    })
+
                     var deferred = $q.defer();
-                    var all = $q.all([groupDeferred.promise, eventsDeferred.promise]);
+                    var all = $q.all([groupDeferred.promise, eventsDeferred.promise, userIdDeferred.promise]);
                     all.then(function(data) {
                         var groupInfo = data[0];
                         var eventsInfo = data[1];
+                        var userId = data[2];
                         deferred.resolve({
                             GroupInfo: groupInfo,
-                            EventsInfo: eventsInfo
+                            EventsInfo: eventsInfo,
+                            UserId: userId
                         });
                     })
                     return deferred.promise

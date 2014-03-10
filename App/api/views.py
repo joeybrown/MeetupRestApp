@@ -1,6 +1,6 @@
 from utils import execute_meetup_api_action, get_meetup_session_from_request, get_meetup_params, get_rsvp_uri
 from django.views.decorators.csrf import csrf_exempt
-from django.http import QueryDict
+from django.http import HttpResponse
 import json
 
 
@@ -9,6 +9,12 @@ def get_group_info(request, group_name):
     data = {'group_urlname': group_name or 'memphis-technology-user-groups'}
     meetup_session = get_meetup_session_from_request(request)
     return execute_meetup_api_action(meetup_api_uri, 'GET', data, meetup_session)
+
+
+def get_user_meetup_id(request):
+    meetup_session = get_meetup_session_from_request(request)
+    user = execute_meetup_api_action('2/member/self', 'GET', {}, meetup_session, False)
+    return HttpResponse(json.dumps(user.get('id')), content_type='application/json')
 
 
 def get_group_events(request):
@@ -24,60 +30,37 @@ def get_group_events(request):
 
 @csrf_exempt
 def rsvp(request, rsvp_id=None, event_id=None):
-    """
-    /rsvps/events/{event_id} - GET, POST the RSVPs for event
-    http://www.meetup.com/meetup_api/docs/2/rsvps
-    http://www.meetup.com/meetup_api/docs/2/rsvp/#create
+    def get_event_id(_rsvp_id, _meetup_session):
+        # meetup doesn't support PUT or Delete, so we must improvise and use POST with event_id
+        rsvp_info = execute_meetup_api_action('/2/rsvp/{0}'.format(_rsvp_id), 'GET', {}, _meetup_session, False)
+        event_info = rsvp_info.get('event')
+        return event_info.get('id')
 
-    /rsvps/{event_id} - GET the detail of a particular RSVP
-    http://www.meetup.com/meetup_api/docs/2/rsvp/#get
-    """
-    method = request.method
-    meetup_api_uri = get_rsvp_uri(rsvp_id, method)
-    data = get_meetup_params(request, {'rsvp_id': rsvp_id, 'event_id': event_id})
+    def get_method(_method):
+        # meetup doesn't support PUT or Delete, so we must improvise
+        if is_special_request(_method):
+            return 'POST'
+        return _method
+
+    def is_special_request(_method):
+        return _method == 'PUT' or _method == 'DELETE'
+
+    method = get_method(request.method)
     meetup_session = get_meetup_session_from_request(request)
+    meetup_api_uri = get_rsvp_uri(rsvp_id, method)
+    data = {}
+    if is_special_request(request.method):
+        event_id = get_event_id(rsvp_id, meetup_session)
+        if request.method == 'DELETE':
+            data = get_meetup_params(request, {'rsvp_id': rsvp_id, 'event_id': event_id, 'rsvp': 'no'})
+    if data is not None:
+        data = get_meetup_params(request, {'rsvp_id': rsvp_id, 'event_id': event_id})
     return execute_meetup_api_action(meetup_api_uri, method, data, meetup_session)
 
 @csrf_exempt
 def event(request, event_id=None):
-    """
-    get all events as well to compare uri structure
-    http://www.meetup.com/meetup_api/docs/2/event/#create
-    http://www.meetup.com/meetup_api/docs/2/event/#edit
-    http://www.meetup.com/meetup_api/docs/2/event/#get
-    http://www.meetup.com/meetup_api/docs/2/event/#delete
-    """
-    #def get_patch_params(_meetup_session, _meetup_api_uri, request_body, _event_id):
-    #    request_body_dict = QueryDict(request_body)
-    #
-    #    response = execute_meetup_api_action(_meetup_api_uri, 'GET', {'event_id': _event_id}, _meetup_session)
-    #    response_data = json.loads(response.DATA)
-    #
-    #    response_data.update(request_body_dict)  # merge the two dicts
-    #    return response_data
-
     meetup_api_uri = '2/event' if event_id is None else '2/event/{0}'.format(event_id)
     method = request.method
     data = get_meetup_params(request, {'event_id': event_id})
-
-    #if request.method == 'PATCH':
-    #    data = get_patch_params(QueryDict(request.body), event_id)
-
-    meetup_session = get_meetup_session_from_request(request)
-    return execute_meetup_api_action(meetup_api_uri, method, data, meetup_session)
-
-
-def profile(request, group_id=None, member_id=None):
-    """
-    http://www.meetup.com/meetup_api/docs/2/profiles/
-    http://www.meetup.com/meetup_api/docs/2/profile#create
-    http://www.meetup.com/meetup_api/docs/2/profile/#edit
-    http://www.meetup.com/meetup_api/docs/2/profile/#get
-    http://www.meetup.com/meetup_api/docs/2/profile/#delete
-    """
-    meetup_api_uri = '2/profile' if (member_id is None and group_id is None) else\
-        '2/profile/{0}/{1}'.format(group_id, member_id)
-    method = request.method
-    data = request.REQUEST
     meetup_session = get_meetup_session_from_request(request)
     return execute_meetup_api_action(meetup_api_uri, method, data, meetup_session)

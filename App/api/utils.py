@@ -1,8 +1,9 @@
 import json
 from django.http import HttpResponse, QueryDict
+from urlparse import parse_qs
 
 
-def execute_meetup_api_action(meetup_api_uri, method, data, meetup_session):
+def execute_meetup_api_action(meetup_api_uri, method, data, meetup_session, web_request=True):
 
     def get_json_response(raw_response):
         return json.loads(raw_response.content)
@@ -26,6 +27,8 @@ def execute_meetup_api_action(meetup_api_uri, method, data, meetup_session):
 
     try:
         json_response = get_json_response(response)
+        if not web_request:
+            return json_response
         return HttpResponse(json.dumps(json_response), content_type='application/json')
     except AttributeError:
         return HttpResponse()
@@ -35,32 +38,41 @@ def get_meetup_session_from_request(request):
     return request.session['meetup_session']
 
 
-def get_meetup_params(request, meetup_params_from_uri):
+def get_meetup_params(request, extra_meetup_params):
 
     data = {}
 
     if request.method == 'POST':
         data.update(request.POST.iteritems())
 
-    if request.body is not None:
-        data.update(json.loads(request.body))
+    if request.method == 'GET':
+        data.update(request.GET.iteritems())
 
-    for key in meetup_params_from_uri:
-        if meetup_params_from_uri[key] is not None:
-            try:
-                data[key] = meetup_params_from_uri[key]
-            except NameError:
-                data = {key: meetup_params_from_uri[key]}
+    if request.body != '':
+        try:
+            data.update(json.loads(request.body))
+        except ValueError:
+            pass
+
+        try:
+            qs_dict = parse_qs(request.body)
+            for key in qs_dict:
+                data[key] = qs_dict[key][0]
+        except Exception:  # fwiw I don't think this happens...
+            pass
+
+    d = extra_meetup_params
+    data.update((k, v) for k, v in d.iteritems() if v is not None)
 
     return data
 
 
 def get_rsvp_uri(rsvp_id, method):
-        if method == 'POST':
-            uri = '2/rsvp'
-        if method == 'GET':
-            if rsvp_id is None:
-                uri = '2/rsvps'
-            else:
-                uri = '2/rsvp/{0}'.format(rsvp_id)
-        return uri
+    if method == 'POST':
+        uri = '/2/rsvp'
+    if method == 'GET':
+        if rsvp_id is None:
+            uri = '/2/rsvps'
+        else:
+            uri = '/2/rsvp/{0}'.format(rsvp_id)
+    return uri
