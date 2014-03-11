@@ -155,21 +155,23 @@ var EditEventModalInstanceCtrl = ['$scope', '$routeParams', '$modalInstance', 'E
     }
 
     $scope.ok = function () {
+        var time = new Date($scope.event.time).getTime();
         if (isNew) {
             var eventResource = new EventResource();
             eventResource.name = $scope.event.name;
-            eventResource.time = new Date($scope.event.time).getTime();
             eventResource.description = $scope.event.description;
             eventResource.group_urlname = $routeParams.groupUrlName;
             eventResource.announce = true;
+            eventResource.time = time;
             eventResource.$save();
+
         } else {
             var eventResource = new EventResource();
             eventResource.name = $scope.event.name;
-            eventResource.time = new Date($scope.event.time).getTime();
             eventResource.description = $scope.event.description;
             eventResource.group_urlname = $routeParams.groupUrlName;
-            EventResource.update({id: event.id}, eventResource)
+            eventResource.time = time;
+            EventResource.update({id: $scope.event.id}, eventResource)
         }
         $modalInstance.close();
     };
@@ -190,7 +192,7 @@ var DeleteEventModalInstanceCtrl = ['$scope', '$modalInstance', 'EventResource',
     $scope.event = event;
 
     $scope.delete = function () {
-        EventResource.delete({id: event.id});
+        event.$delete({id: event.id});
         $modalInstance.close()
     };
 
