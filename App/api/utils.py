@@ -1,5 +1,5 @@
 import json
-from django.http import HttpResponse, QueryDict
+from django.http import HttpResponse
 from urlparse import parse_qs
 
 

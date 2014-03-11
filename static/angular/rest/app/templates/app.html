@@ -13,7 +13,7 @@
 
 <div class="row panel panel-success" data-ng-repeat="group in groups">
     <div class="panel-heading">
-        <div class="panel-title">
+        <div class="panel-title" data-ng-click="goToGroupPage(group.urlname)">
             {{ group.name }} - {{ group.members }} {{ group.who }}
         </div>
     </div>

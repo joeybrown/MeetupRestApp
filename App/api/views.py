@@ -3,20 +3,20 @@ from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse
 import json
 
-
+@csrf_exempt
 def get_group_info(request, group_name):
     meetup_api_uri = '2/groups'
     data = {'group_urlname': group_name or 'memphis-technology-user-groups', 'fields': 'self'}
     meetup_session = get_meetup_session_from_request(request)
     return execute_meetup_api_action(meetup_api_uri, 'GET', data, meetup_session)
 
-
+@csrf_exempt
 def get_user_meetup_id(request):
     meetup_session = get_meetup_session_from_request(request)
     user = execute_meetup_api_action('2/member/self', 'GET', {}, meetup_session, False)
     return HttpResponse(json.dumps(user.get('id')), content_type='application/json')
 
-
+@csrf_exempt
 def get_group_events(request):
     def get_group_events_data(q):
         d = {'page': 20, 'fields': 'self'}
@@ -61,6 +61,6 @@ def rsvp(request, rsvp_id=None, event_id=None):
 def event(request, event_id=None):
     meetup_api_uri = '2/event' if event_id is None else '2/event/{0}'.format(event_id)
     method = request.method
-    data = get_meetup_params(request, {'event_id': event_id})
+    data = get_meetup_params(request, {'event_id': event_id, 'fields': 'self'})
     meetup_session = get_meetup_session_from_request(request)
     return execute_meetup_api_action(meetup_api_uri, method, data, meetup_session)

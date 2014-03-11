@@ -38,7 +38,7 @@ app.config(['$routeProvider', function ($routeProvider) {
                 }]
             }
         })
-        .when('/app/group/:groupUrlName', {
+        .when('/app/groups/:groupUrlName', {
             controller: 'GroupCtrl',
             templateUrl: '/static/angular/rest/app/templates/group.html',
             reloadOnSearch: false,
@@ -83,14 +83,6 @@ app.config(['$routeProvider', function ($routeProvider) {
                     return deferred.promise
                 }]
             }
-        })
-        .when('/app/group/:groupUrlName/profile', {
-            controller: 'AppCtrl',
-            templateUrl: '/static/angular/rest/app/templates/app.html'
-        })
-        .when('/app/group/:groupUrlName/event/:eventId', {
-            controller: 'AppCtrl',
-            templateUrl: '/static/angular/rest/app/templates/app.html'
         });
 }]);
 

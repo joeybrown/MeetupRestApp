@@ -1,24 +1,18 @@
 'use strict';
 
-app.controller('GroupCtrl',  ['$scope', '$routeParams', '$location', '$modal', '$timeout', '$route', 'SmoothScroll', 'GroupInfo', 'GroupEvents', 'Rsvps', 'Group',
-    function ($scope, $routeParams, $location, $modal, $timeout, $route, SmoothScroll, GroupInfo, GroupEvents, Rsvps, Group) {
-
-        $scope.params = $routeParams;
-        $scope.groupInfo = Group.GroupInfo.results[0];
-        $scope.eventsInfo = Group.EventsInfo;
-        $scope.userId = Group.UserId;
-
-        $scope.showAddEventButton = function() {
-            return _.contains($scope.groupInfo.self.actions, 'event_create')
-        }
-
-        console.log($scope.groupInfo);
+app.controller('GroupCtrl',  ['$scope', '$routeParams', '$location', '$modal', '$timeout', '$route', 'SmoothScroll', 'GroupInfo', 'GroupEvents', 'Group',
+    function ($scope, $routeParams, $location, $modal, $timeout, $route, SmoothScroll, GroupInfo, GroupEvents, Group) {
 
         var reloadPage = function() {
             $timeout(function() {
                 $route.reload();
             });
         };
+
+        $scope.params = $routeParams;
+        $scope.groupInfo = Group.GroupInfo.results[0];
+        $scope.eventsInfo = Group.EventsInfo;
+        $scope.userId = Group.UserId;
 
         $scope.pagination = (function () {
             var pageNumber = (function () {
@@ -55,6 +49,10 @@ app.controller('GroupCtrl',  ['$scope', '$routeParams', '$location', '$modal', '
                 selectPage: selectPage
             }
         }())
+
+        $scope.showAddEventButton = function() {
+            return _.contains($scope.groupInfo.self.actions, 'event_create')
+        }
 
         $scope.epochToLocaleTime = function(epoch) {
             epoch = parseInt(epoch);
@@ -152,7 +150,6 @@ var EditEventModalInstanceCtrl = ['$scope', '$routeParams', '$modalInstance', 'E
         $scope.event = {};
         $scope.labelText = 'Create Event';
     } else {
-        console.log(event);
         $scope.event = event;
         $scope.labelText = 'Edit Event';
     }

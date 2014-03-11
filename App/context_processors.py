@@ -1,4 +1,5 @@
 from rauth import OAuth1Service
+import os
 
 
 def get_name(meetup_session):
@@ -19,8 +20,8 @@ def log_in_processor(request):
     except KeyError:
         meetup = OAuth1Service(
             name='meetup',
-            consumer_key='3cpi55r08a8i1m3t94lt9o4ens',
-            consumer_secret='o7kjcbe6c1a8bujpjb1a1f01kh',
+            consumer_key=os.environ['CONSUMER_KEY'],
+            consumer_secret=os.environ['CONSUMER_PW'],
             request_token_url='https://api.meetup.com/oauth/request',
             access_token_url='https://api.meetup.com/oauth/access',
             authorize_url='http://www.meetup.com/authorize',
