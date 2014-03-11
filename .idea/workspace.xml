@@ -27,135 +27,116 @@
     <favorites_list name="REST" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="AppCtrl.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/static/angular/rest/app/controllers/AppCtrl.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="8" column="0" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="GroupCtrl.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/static/angular/rest/app/controllers/GroupCtrl.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="247" column="3" selection-start="8151" selection-end="8151" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-                  <folding>
-                    <element signature="e#44#4960#0" expanded="false" />
-                    <element signature="e#326#420#0" expanded="false" />
-                    <element signature="e#642#2089#0" expanded="false" />
-                    <element signature="e#2141#2229#0" expanded="false" />
-                    <element signature="e#2282#2387#0" expanded="false" />
-                    <element signature="e#2440#2545#0" expanded="false" />
-                    <element signature="e#2609#3273#0" expanded="false" />
-                    <element signature="e#3331#3796#0" expanded="false" />
-                    <element signature="e#3377#3649#0" expanded="false" />
-                    <element signature="e#3861#4428#0" expanded="false" />
-                    <element signature="e#4486#4951#0" expanded="false" />
-                    <element signature="e#4532#4804#0" expanded="false" />
-                    <element signature="e#4997#6430#0" expanded="false" />
-                    <element signature="e#5195#5272#0" expanded="false" />
-                    <element signature="e#5386#6239#0" expanded="false" />
-                    <element signature="e#6468#6805#0" expanded="false" />
-                    <element signature="e#6840#7714#0" expanded="false" />
-                    <element signature="e#7751#8150#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="EventLocation.js" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/static/angular/rest/app/directives/EventLocation.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="26" column="16" selection-start="1234" selection-end="1234" vertical-scroll-proportion="0.91549295" vertical-offset="0" max-vertical-offset="585">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="app.html" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/static/angular/rest/app/templates/app.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="2" column="12" selection-start="62" selection-end="62" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="720">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="App.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/static/angular/rest/app/App.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="4" column="48" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1410">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="context_processors.py" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/App/context_processors.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="12" column="18" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="795">
-                  <folding>
-                    <element signature="e#0#31#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="EventActions.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/static/angular/rest/app/directives/EventActions.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="10" column="0" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
-                  <folding>
-                    <element signature="e#1213#1306#0" expanded="false" />
-                    <element signature="e#1347#1824#0" expanded="false" />
-                    <element signature="e#1909#2237#0" expanded="false" />
-                    <element signature="e#2286#2427#0" expanded="false" />
-                    <element signature="e#2482#2589#0" expanded="false" />
-                    <element signature="e#2645#2750#0" expanded="false" />
-                    <element signature="e#3054#3358#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="GroupEvents.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/static/angular/rest/app/services/GroupEvents.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="group.html" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/static/angular/rest/app/templates/group.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="44" column="60" selection-start="1644" selection-end="1644" vertical-scroll-proportion="-14.375" vertical-offset="315" max-vertical-offset="2160">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="DjangoTemplate Fragment (EventLocation.js:64).html" pinned="false" current="false" current-in-tab="true">
-            <entry file="mock:///DjangoTemplate Fragment (EventLocation.js:64).html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="13" column="18" selection-start="255" selection-end="255" vertical-scroll-proportion="0.4513889" vertical-offset="0" max-vertical-offset="432">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="AppCtrl.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/angular/rest/app/controllers/AppCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="0" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GroupCtrl.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/angular/rest/app/controllers/GroupCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="60" column="0" selection-start="2388" selection-end="2388" vertical-scroll-proportion="0.49916247" vertical-offset="2" max-vertical-offset="675">
+              <folding>
+                <element signature="e#326#420#0" expanded="false" />
+                <element signature="e#642#2089#0" expanded="false" />
+                <element signature="e#2141#2229#0" expanded="false" />
+                <element signature="e#2440#2545#0" expanded="false" />
+                <element signature="e#2609#3273#0" expanded="false" />
+                <element signature="e#3331#3796#0" expanded="false" />
+                <element signature="e#3377#3649#0" expanded="false" />
+                <element signature="e#3861#4428#0" expanded="false" />
+                <element signature="e#4486#4951#0" expanded="false" />
+                <element signature="e#4532#4804#0" expanded="false" />
+                <element signature="e#4997#6430#0" expanded="false" />
+                <element signature="e#5195#5272#0" expanded="false" />
+                <element signature="e#5386#6239#0" expanded="false" />
+                <element signature="e#6468#6805#0" expanded="false" />
+                <element signature="e#6840#7714#0" expanded="false" />
+                <element signature="e#7751#8150#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventLocation.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/angular/rest/app/directives/EventLocation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="0" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/angular/rest/app/templates/app.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="12" selection-start="62" selection-end="62" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="720">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/angular/rest/app/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="48" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1410">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="context_processors.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/context_processors.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="18" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="795">
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventActions.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/angular/rest/app/directives/EventActions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="0" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
+              <folding>
+                <element signature="e#1213#1306#0" expanded="false" />
+                <element signature="e#1347#1824#0" expanded="false" />
+                <element signature="e#1909#2237#0" expanded="false" />
+                <element signature="e#2286#2427#0" expanded="false" />
+                <element signature="e#2482#2589#0" expanded="false" />
+                <element signature="e#2645#2750#0" expanded="false" />
+                <element signature="e#3054#3358#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GroupEvents.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/angular/rest/app/services/GroupEvents.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="group.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/angular/rest/app/templates/group.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="35" selection-start="1619" selection-end="1619" vertical-scroll-proportion="-14.375" vertical-offset="315" max-vertical-offset="2160">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -168,7 +149,6 @@
         <option value="$PROJECT_DIR$/static/angular/rest/app/providers/EventResource.js" />
         <option value="$PROJECT_DIR$/static/angular/rest/app/providers/RsvpResource.js" />
         <option value="$PROJECT_DIR$/static/angular/rest/app/templates/group.html" />
-        <option value="$PROJECT_DIR$/App/api/utils.py" />
         <option value="/DjangoTemplate Fragment (EventActions.js:64).html" />
         <option value="$PROJECT_DIR$/App/api/views.py" />
         <option value="$PROJECT_DIR$/REST/settings.py" />
@@ -178,9 +158,10 @@
         <option value="$PROJECT_DIR$/static/angular/rest/app/directives/EventActions.js" />
         <option value="$PROJECT_DIR$/App/context_processors.py" />
         <option value="$PROJECT_DIR$/static/angular/rest/app/controllers/AppCtrl.js" />
-        <option value="$PROJECT_DIR$/static/angular/rest/app/controllers/GroupCtrl.js" />
         <option value="$PROJECT_DIR$/static/angular/rest/app/directives/EventLocation.js" />
         <option value="/DjangoTemplate Fragment (EventLocation.js:64).html" />
+        <option value="$PROJECT_DIR$/App/api/utils.py" />
+        <option value="$PROJECT_DIR$/static/angular/rest/app/controllers/GroupCtrl.js" />
       </list>
     </option>
   </component>
@@ -716,11 +697,11 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30346233" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40325865" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3268839" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2804878" sideWeight="0.6309227" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.6309227" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15795091" sideWeight="0.5967413" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.291889" sideWeight="0.5967413" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15795091" sideWeight="0.6731161" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.291889" sideWeight="0.6731161" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2977099" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21181263" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -746,17 +727,10 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="350" />
+      <option name="time" value="351" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/App/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/angular/rest/app/providers/RsvpResource.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="9" selection-start="230" selection-end="230" vertical-scroll-proportion="0.16129032" vertical-offset="0" max-vertical-offset="558">
@@ -799,6 +773,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/angular/rest/app/controllers/AppCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/angular/rest/app/templates/app.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="12" selection-start="62" selection-end="62" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="720">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static/angular/rest/app/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="48" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1410">
@@ -812,20 +800,6 @@
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/angular/rest/app/services/GroupEvents.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="535">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/angular/rest/app/templates/app.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="12" selection-start="62" selection-end="62" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="720">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -844,22 +818,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/angular/rest/app/services/GroupEvents.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="535">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/api/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="63" selection-start="737" selection-end="737" vertical-scroll-proportion="0.11147541" vertical-offset="172" max-vertical-offset="1215">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/angular/rest/app/directives/EventLocation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static/angular/rest/app/templates/group.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="60" selection-start="1644" selection-end="1644" vertical-scroll-proportion="-14.375" vertical-offset="315" max-vertical-offset="2160">
+        <state line="44" column="35" selection-start="1619" selection-end="1619" vertical-scroll-proportion="-14.375" vertical-offset="315" max-vertical-offset="2160">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/angular/rest/app/controllers/GroupCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="247" column="3" selection-start="8151" selection-end="8151" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+        <state line="60" column="0" selection-start="2388" selection-end="2388" vertical-scroll-proportion="0.49916247" vertical-offset="2" max-vertical-offset="675">
           <folding>
-            <element signature="e#44#4960#0" expanded="false" />
             <element signature="e#326#420#0" expanded="false" />
             <element signature="e#642#2089#0" expanded="false" />
             <element signature="e#2141#2229#0" expanded="false" />
-            <element signature="e#2282#2387#0" expanded="false" />
             <element signature="e#2440#2545#0" expanded="false" />
             <element signature="e#2609#3273#0" expanded="false" />
             <element signature="e#3331#3796#0" expanded="false" />
@@ -874,20 +867,6 @@
             <element signature="e#6840#7714#0" expanded="false" />
             <element signature="e#7751#8150#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/angular/rest/app/controllers/AppCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/angular/rest/app/directives/EventLocation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="16" selection-start="1234" selection-end="1234" vertical-scroll-proportion="0.91549295" vertical-offset="0" max-vertical-offset="585">
-          <folding />
         </state>
       </provider>
     </entry>

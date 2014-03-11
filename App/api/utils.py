@@ -23,7 +23,7 @@ def execute_meetup_api_action(meetup_api_uri, method, data, meetup_session, web_
     data = dict(data)
     response = execute_action(meetup_api_uri, method, data, meetup_session)
 
-    print 'most recent url:'.format(response.url)
+    print 'most recent url: {0}'.format(response.url)
 
     try:
         json_response = get_json_response(response)
